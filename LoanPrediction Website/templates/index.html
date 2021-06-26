@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Debanjan Das">
+
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do Fyou want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>German Credit Data Analysis</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="static/images/logo.svg">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#header">HOME <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Predict">PREDICT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Visualize">VISUALIZE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Insights">INSIGHTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#contact">CONTACT</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>German Credit Data <span id="js-rotating"> Analysis, Prediction, Visualization</span>
+                            </h1>
+                            <p class="p-heading p-large"></p>
+                            <a class="btn-solid-lg page-scroll" href="#Predict">Predict Approval</a>
+                            <a class="btn-solid-lg page-scroll" href="#Visualize">Visualize Data</a>
+
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+    <br><br>
+    <!-- Description -->
+    <div id="Predict" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="hexagon"><span>
+                                <i class="fa fa-bar-chart"></i>
+                            </span></div>
+
+                        <div class="card-body one">
+                            <h4 class="card-title">Data Description</h4>
+                            <p>&#8226 German Credit Data </br>&#8226 Shape: 1,000 Rows & 21 Columns</br>&#8226 Data
+                                Source: Professor Dr. Hans Hofmann, UCI Machine Learning Repository</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="hexagon"><span>
+                                <i class="fa fa-area-chart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body one">
+                            <h4 class="card-title">Data Visualization</h4>
+                            <p>&#8226 Used Pandas to visualize German Credit Data.</br>
+                                &#8226 Used Sweetviz Library to get the distribution of each feature.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="hexagon"><span>
+                                <i class="fa fa-line-chart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body one">
+                            <h4 class="card-title">Loan Prediction</h4>
+                            <p>&#8226 Get to know if you would be given a loan based on the data you provide.</br>
+                                &#8226 Uses XGBoost Machine Learning model trained on German Credit Data with an
+                                accuracy of 85%.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+    <!-- Intro -->
+    <div>
+        <!-- Predict -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h3 class="looking">Are you looking for a Individual Loan ?</h3>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+
+                    <!-- Call Me Form -->
+                    <form id="callMeForm" data-toggle="validator" data-focus="false">
+                        <div class="form-group">
+                            <a type="submit" class="form-control-submit-button" href="{{ url_for('loanform') }}">Yes</a>
+                        </div>
+                    </form>
+                    <!-- end of call me form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <!-- end of call me -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+    <!-- Vizualization -->
+    <div id="Visualize" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="card-body">
+
+                    <div class="col-lg-12">
+                        <div class="section-title">Visualization</div>
+                        <h2>Get thorough analysis<br>of German Credit Data</h2>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Age distribution of people has been looked into following which
+                                    we can conclude that most people who apply for loans lie in the age category 20-40
+                                </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Another interesting find is that we can see the young adult
+                                    group and the senior group stand a more chance of a loan approval compared to
+                                    students and elderly people.</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Just like age, we also look into the sex distribution, that is
+                                    the male:female ratio for applying loans and getting approved.</br></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">When we look into the application reasons of a loan, we observe
+                                    that most people take loans for retraining, repairs and television/radio purposes.
+                                </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">By looking at the violin graph, we can notice the distribution
+                                    of good and bad credit among different category of employees.</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Last but not the least, we can assess the levels of risk by
+                                    wealth. We can observe that people in the poor category have a very high risk of
+                                    getting rejected while the risk drops down dramatically for rich people.</div>
+                            </li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot2.png" class="charts">
+                            </div>
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot3.png" class="charts">
+                            </div>
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot4.png" class="charts">
+                            </div>
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot5.png" class="charts">
+                            </div>
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot6.png" class="charts">
+                            </div>
+                            <div class="col-md-6 left">
+                                <img src="static/images/newplot7.png" class="charts">
+                            </div>
+                        </div>>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of services -->
+    <div id="Insights" class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xl-6">
+                    <img src="static/images/clustering.png" class="charts" align="left">
+                    <div>
+                        <script type="text/javascript">window.PlotlyConfig = { MathJaxConfig: 'local' };</script>
+
+
+                    </div>
+                    <!-- end of image-container -->
+                </div>
+                <!-- end of col -->
+                <div class="col-lg-7 col-xl-6">
+                    <div class="text-container">
+                        <div class="section-title">Few Insights.</div>
+                        <h2>Using KNN clustering to improve prediction accuracy of Loan Approval</h2>
+                        <p>Dataset divided into clusters followed by classification on each of the clusters.</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Clustering helped in improving the model accuracy by 3-5%.</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">After clustering, XGBoost model showed the highest improvement,
+                                    which has been used in this website for loan prediction.</div>
+                            </li>
+                        </ul>
+                        <!-- end of counter -->
+                    </div> <!-- end of text-container -->
+                </div>
+            </div> <!-- end of col -->
+        </div>
+    </div>
+
+    <!-- end of row -->
+    <!-- end of about -->
+
+    <!-- Footer -->
+    <div id=contact class="footer">
+        <div class="container">
+            <div class="row">
+                <img class="card-image" src="static/images/pic.jpg" width="150" height="150" alt="alternative">
+
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Developed by:</h4>
+                        <h2 class="white">Debanjan Das</h2>
+                        <p class="white">BSc. Computer Science student at University College Dublin</p>
+                        <p class="white">Email:debanjan.das@ucdconnect.ie </p>
+
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="floatright">
+                    <div class="text-container">
+                        <h4>Connect</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i> <a class="white"
+                                    href="https://www.linkedin.com/in/debanjan-das-a29663119">LinkedIn</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i><a class="white"
+                                    href="https://www.facebook.com/debanjan.das.52035">&nbsp;Facebook</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-github" aria-hidden="true"></i> <a class="white"
+                                    href="https://github.com/debanjandas9999">GitHub</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+    <!-- Scripts -->
+    <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/popper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/bootstrap.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.magnific-popup.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/morphext.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/isotope.pkgd.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/validator.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/scripts.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+</body>
+
+</html>

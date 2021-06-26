@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>Individual Loan Application</title>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <!-- Favicon  -->
+    <link rel="icon" href="static/images/logo.svg">
+    <style>
+        .tab {
+            display: none;
+        }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="static/images/logo.svg" alt="alternative"></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="static/images/logo.svg"
+                    alt="alternative"></a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{ url_for('index') }}#header">HOME <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#Predict">PREDICT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{ url_for('index') }}#Visualize">VISUALIZE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{ url_for('index') }}#Insights">INSIGHTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav> <!-- end of navbar -->
+    </nav> <!-- end of navbar -->
+
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Individual Applicant</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="{{ url_for('index') }}#header">Back</a><i
+                            class="fa fa-angle-double-right"></i><span>Predict Individual Loan Approval</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+
+    <!-- Terms Content -->
+    <div id="Predict" class="ex-basic-2">
+        <h4 class="text-center fill">Fill the form to Know your result</h4>
+        <div class="container">
+            <form id="contactForm2" action="{{ url_for('predict') }}" method="POST">
+                <div class="row tab">
+                    <div class="col-lg-6 acount">
+                        <div class="account">
+                            <div class="range-wrap" style="padding-top: 10px;">
+                                <input type="range" class="range" min="0" max="100" value="0" disabled= "true">
+                                <output class="bubble"></output>
+                              </div>
+                            <h4 class="text-center"> Personal details</h4>
+                            <div class="text-container">
+
+                                <div class="form-group">
+                                    <label>Personal status and sex</label>
+                                    <select id="Personal status and sex" name="Personal status and sex"
+                                        class="custom-select" required="required">
+                                        <option value="1">male : divorced/separated</option>
+                                        <option value="0">female : divorced/separated/married</option>
+                                        <option value="3">male : single</option>
+                                        <option value="2">male : married/widowed</option>
+                                        <option value="4">female : single</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input id="Age in years" placeholder="E.g., 28" name="Age in years" type="text"
+                                        class="form-control" required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duration of permanent residency (In years) </label>
+                                    <input id="Present residence since" placeholder="E.g., 5"
+                                        name="Present residence since" type="text" class="form-control"
+                                        required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Telephone registration</label>
+                                    <select id="Telephone" name="Telephone" class="custom-select" required="required">
+                                        <option value="0">none</option>
+                                        <option value="1">yes, registered under the customers name</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Number of people being liable to provide maintenance for</label>
+                                    <input id="Number of people being liable to provide maintenance for"
+                                        placeholder="E.g., 2"
+                                        name="Number of people being liable to provide maintenance for" type="text"
+                                        class="form-control" required="required">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab">
+                    <div class="col-lg-6 acount">
+                        <div class="account">
+                            <div class="range-wrap" style="padding-top: 10px;">
+                                <input type="range" class="range" min="0" max="100" value="25" disabled= "true">
+                                <output class="bubble"></output>
+                              </div>
+                            <h4 class="text-center">Credit Record</h4>
+                            <div class="text-container">
+
+                                <div class="form-group">
+                                    <label>Credit history</label>
+                                    <select id="Credit history" name="Credit history" class="custom-select"
+                                        required="required">
+                                        <option value="4">no credits taken/ all credits paid back duly</option>
+                                        <option value="0">all credits at this bank paid back duly</option>
+                                        <option value="3">existing credits paid back duly till now</option>
+                                        <option value="2">delay in paying off in the past</option>
+                                        <option value="1">critical account/ other credits existing (not at this bank)
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Number of existing loans at this bank</label>
+                                    <input id="Number of existing credits at this bank"
+                                        placeholder="E.g., 1"
+                                        name="Number of existing credits at this bank" type="text" class="form-control"
+                                        required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Other installment plans</label>
+                                    <select id="Other installment plans" name="Other installment plans"
+                                        class="custom-select" required="required">
+                                        <option value="0">bank</option>
+                                        <option value="2">stores</option>
+                                        <option value="1">none</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Other debtors / guarantors</label>
+                                    <select id="select" name="select" class="custom-select" required="required">
+                                        <option value="2">none</option>
+                                        <option value="0">co-applicant</option>
+                                        <option value="1">guarantor</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duration of current employment (in years)</label>
+                                    <select id="Present employment since" name="Present employment since"
+                                        class="custom-select" required="required">
+                                        <option value="4">unemployed</option>
+                                        <option value="1">... < 1 year</option>
+                                        <option value="2">1 <= ... < 4 years</option>
+                                        <option value="3">4 <= ... < 7 years</option>
+                                        <option value="0">.. &gt;= 7 years</option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row actual tab">
+                    <div class="col-lg-6 acount">
+                        <div class="account">
+                            <div class="range-wrap" style="padding-top: 10px;">
+                                <input type="range" class="range" min="0" max="100" value="50" disabled= "true">
+                                <output class="bubble"></output>
+                              </div>
+                            <h4 class="text-center"> Loan Information</h4>
+                            <div class="text-container">
+
+                                <div class="form-group">
+                                    <label>Loan amount</label>
+                                    <input id="Credit amount" name="Credit amount" placeholder="E.g., 2000"
+                                        type="text" class="form-control" required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Purpose of the loan</label>
+                                    <select id="Purpose" name="Purpose" class="custom-select" required="required">
+                                        <option value="2">car (new)</option>
+                                        <option value="3">car (used)</option>
+                                        <option value="6">furniture/equipment</option>
+                                        <option value="7">radio/television</option>
+                                        <option value="4">domestic appliances</option>
+                                        <option value="8">repairs</option>
+                                        <option value="5">education</option>
+                                        <option value="0">(vacation - does not exist?)</option>
+                                        <option value="9">retraining</option>
+                                        <option value="1">business</option>
+                                        <option value="10">others</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Duration of Loan (in months)</label>
+                                    <input id="Duration in month" name="Duration in month"
+                                        placeholder="E.g., 24" type="text" class="form-control"
+                                        required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Installment rate in percentage of disposable income</label>
+                                    <input id="Installment rate in percentage of disposable income"
+                                        placeholder="Installment rate in percentage of disposable income"
+                                        name="Installment rate in percentage of disposable income" type="text"
+                                        class="form-control" required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Foreign Worker status</label>
+                                    <select id="foreign worker" name="foreign worker" class="custom-select"
+                                        required="required">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row actual tab">
+                    <div class="col-lg-6 acount">
+                        <div class="account">
+                            <div class="range-wrap" style="padding-top: 10px;">
+                                <input type="range" class="range" min="0" max="100" value="75" disabled= "true">
+                                <output class="bubble"></output>
+                              </div>
+                            <h4 class="text-center"> Current Assets</h4>
+                            <div class="text-container">
+
+                                <div class="form-group">
+                                    <label>Status of Savings account/bonds</label>
+                                    <select id="Savings account/bonds" name="Savings account/bonds"
+                                        class="custom-select" required="required">
+                                        <option value="1">... < 100 DM</option>
+                                        <option value="2">100 <= ... < 500 DM</option>
+                                        <option value="3">500 <= ... < 1000 DM</option>
+                                        <option value="0">.. &gt;= 1000 DM</option>
+                                        <option value="4">unknown/ no savings account</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Status of existing checking account</label>
+                                    <select id="Status of existing checking account"
+                                        name="Status of existing checking account" class="custom-select"
+                                        required="required">
+                                        <option value="1">
+                                            < 0 DM</option>
+                                        <option value="0">0 <= ... < 200 DM</option>
+                                        <option value="2">... &gt;= 200 DM / salary assignments for at least 1 year
+                                        </option>
+                                        <option value="3">no checking account</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Property</label>
+                                    <select id="Property" name="Property" class="custom-select" required="required">
+                                        <option value="2">real estate</option>
+                                        <option value="0">if not A121 : building society savings agreement/ life
+                                            insurance</option>
+                                        <option value="1">if not A121/A122 : car or other, not in attribute 6</option>
+                                        <option value="3">unknown / no property</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Housing status</label>
+                                    <select id="Housing" name="Housing" class="custom-select" required="required">
+                                        <option value="2">Rent</option>
+                                        <option value="1">Own</option>
+                                        <option value="0">For Free</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Job position</label>
+                                    <select id="Job" name="Job" class="custom-select" required="required">
+                                        <option value="2">unemployed/ unskilled - non-resident</option>
+                                        <option value="3">unskilled - resident</option>
+                                        <option value="1">skilled employee / official</option>
+                                        <option value="0">management/ self-employed/</option>
+                                        <option value="4">highly qualified employee/ officer</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerdemo">
+                    <div style="overflow:visible;">
+                        <div style="float:right;">
+                            <button class="submit-button" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button class="submit-button" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            <button type="submit" value="Predict" id="submitButton" class="submit-button" style="display: none;">Predict</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+            </form>
+            <script>
+                var currentTab = 0; // Current tab is set to be the first tab (0)
+                showTab(currentTab); // Display the current tab
+
+                function showTab(n) {
+                    // This function will display the specified tab of the form...
+                    var x = document.getElementsByClassName("tab");
+                    x[n].style.display = "block";
+                    //... and fix the Previous/Next buttons:
+                    if (n == 0) {
+                        document.getElementById("prevBtn").style.display = "none";
+                    } else {
+                        document.getElementById("prevBtn").style.display = "inline";
+                    }
+                    if (n == (x.length - 1)) {
+                        document.getElementById("nextBtn").style.display = "none";
+                        document.getElementById("submitButton").style.display = "inline";
+                    } else {
+                        document.getElementById("nextBtn").style.display = "inline";
+                        document.getElementById("submitButton").style.display = "none";
+                    }
+                    //... and run a function that will display the correct step indicator:
+                    fixStepIndicator(n)
+                }
+
+                function nextPrev(n) {
+                    // This function will figure out which tab to display
+                    var x = document.getElementsByClassName("tab");
+                    // Exit the function if any field in the current tab is invalid:
+                    if (n == 1 && !validateForm()) return false;
+                    // Hide the current tab:
+                    x[currentTab].style.display = "none";
+                    // Increase or decrease the current tab by 1:
+                    currentTab = currentTab + n;
+                    // if you have reached the end of the form...
+                    if (currentTab >= x.length) {
+                        // ... the form gets submitted:
+                        document.getElementById("contactForm2").submit();
+                        return false;
+                    }
+                    // Otherwise, display the correct tab:
+                    showTab(currentTab);
+                }
+
+                function validateForm() {
+                    // This function deals with validation of the form fields
+                    var x, y, i, valid = true;
+                    x = document.getElementsByClassName("tab");
+                    y = x[currentTab].getElementsByTagName("input");
+                    // A loop that checks every input field in the current tab:
+                    for (i = 0; i < y.length; i++) {
+                        // If a field is empty...
+                        if (y[i].value == "") {
+                            // add an "invalid" class to the field:
+                            y[i].className += " invalid";
+                            // and set the current valid status to false
+                            valid = false;
+                        }
+                    }
+                    // If the valid status is true, mark the step as finished and valid:
+                    if (valid) {
+                        document.getElementsByClassName("step")[currentTab].className += " finish";
+                    }
+                    return valid; // return the valid status
+                }
+
+                function fixStepIndicator(n) {
+                    // This function removes the "active" class of all steps...
+                    var i, x = document.getElementsByClassName("step");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].className = x[i].className.replace(" active", "");
+                    }
+                    //... and adds the "active" class on the current step:
+                    x[n].className += " active";
+                }
+            </script>
+
+        </div> <!-- end of container -->
+        <div class="result" align="center">
+
+        </div>
+    </div>
+    </div>
+    <!-- end of terms content -->
+
+
+    <!-- Footer -->
+    <div id=contact class="footer">
+        <div class="container">
+            <div class="row">
+                <img class="card-image" src="static/images/pic.jpg" width="150" height="150" alt="alternative">
+
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Developed by:</h4>
+                        <h2 class="white">Debanjan Das</h2>
+                        <p class="white">BSc. Computer Science student at University College Dublin</p>
+                        <p class="white">Email:debanjan.das@ucdconnect.ie </p>
+
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Connect</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i> <a class="white"
+                                    href="https://www.linkedin.com/in/debanjan-das-a29663119">LinkedIn</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i><a class="white"
+                                    href="https://www.facebook.com/debanjan.das.52035">&nbsp;Facebook</a>
+                            </li>
+
+
+                            <li>
+                                <i class="fa fa-github" aria-hidden="true"></i> <a class="white"
+                                    href="https://github.com/debanjandas9999">GitHub</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+
+    <!-- Scripts -->
+    <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/popper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/bootstrap.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.magnific-popup.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/morphext.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/isotope.pkgd.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/validator.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/scripts.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/swiper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+
+    <script type="text/javascript">
+        const allRanges = document.querySelectorAll(".range-wrap");
+    allRanges.forEach(wrap => {
+      const range = wrap.querySelector(".range");
+      const bubble = wrap.querySelector(".bubble");
+    
+      range.addEventListener("input", () => {
+        setBubble(range, bubble);
+      });
+      setBubble(range, bubble);
+    });
+    
+    function setBubble(range, bubble) {
+      const val = range.value;
+      const min = range.min ? range.min : 0;
+      const max = range.max ? range.max : 100;
+      const newVal = Number(((val - min) * 100) / (max - min));
+      bubble.innerHTML = val+'%';
+    
+      // Sorta magic numbers based on size of the native UI thumb
+      bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+    }
+    </script>
+    
+
+</body>
+
+</html>

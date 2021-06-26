@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Individual Loan Applicantion</title>
+     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
+	<link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+	<link href="static/css/bootstrap.css" rel="stylesheet">
+    <!-- Favicon  -->
+    <link rel="icon" href="static/images/logo.svg">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="static/images/logo.svg" alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+         <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+       
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="static/images/logo.svg"		alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Predict">PREDICT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Visualize">VISUALIZE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="{{ url_for('index') }}#Insights">INSIGHTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+           
+        </div>
+    </nav> <!-- end of navbar -->
+	    </nav> <!-- end of navbar -->
+
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Individual Applicant</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+
+    <!-- Terms Content -->
+    <Center>
+    <div id="Predict" class="ex-basic-2">
+		
+        <div class="container">
+            <form id="contactForm2" action="result.html" method="POST">
+            <div class="row">
+               
+               <div class="child">
+                {% if prediction_text == 'r' %}
+                   <h4 class="fill">Your Loan application has been rejected.</h4>
+                   <p class="used">Based on what you told us, we won't be able to continue with your application right now.</p>
+                   
+                {% else %}
+                   <h4 class="fill">Your Loan application has been accepted.</h4>
+                   <p class="used">Congratulations!</p>
+                {% endif %}
+
+                <div class="reject">
+                <a href="{{ url_for('index') }}" class="submit-button">Back</a>
+                </div>
+               </div>
+             
+                </div>	
+
+                
+
+					</form>
+					</div> <!-- end of container -->
+				<div class="result" align="center">
+						
+				</div>
+		</div>
+    </div> <!-- end of ex-basic -->
+</Center>
+    <!-- end of terms content -->
+ 	  <!-- Details 2 -->
+       
+<!-- end of details 2 -->
+
+    <!-- Footer -->
+    <div id=contact class="footer">
+        <div class="container">
+            <div class="row">
+            <img class="card-image" src="static/images/pic.jpg"  width="150" height="150" alt="alternative">
+
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Developed by:</h4>
+                        <h2 class="white">Debanjan Das</h2>
+                        <p class="white">BSc. Computer Science student at University College Dublin</p>
+                        <p class="white">Email:debanjan.das@ucdconnect.ie </p>
+                    
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Connect</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                               <i class="fa fa-linkedin" aria-hidden="true"></i> <a class="white" href="https://www.linkedin.com/in/debanjan-das-a29663119">LinkedIn</a>
+                            </li>
+                           
+                            <li>
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i><a class="white" href="https://www.facebook.com/debanjan.das.52035">&nbsp;Facebook</a>
+                            </li>
+
+
+                            <li>
+                               <i class="fa fa-github" aria-hidden="true"></i> <a class="white" href="https://github.com/debanjandas9999">GitHub</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+               
+                
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div>
+    
+    <!-- Scripts -->
+     <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="static/js/popper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/bootstrap.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/jquery.magnific-popup.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/morphext.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/isotope.pkgd.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/validator.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="static/js/scripts.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="static/js/swiper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+
+</body>
+
+</html>
