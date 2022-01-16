@@ -4,7 +4,7 @@ Topic - Credit Risk Assessment Using Selected Machine Learning Algorithms.
 Name - Debanjan Das
 Student ID - 17202833
 
-Website link - https://debanjandas-loanpredictor-rtbl5.ondigitalocean.app/
+Website link - https://debanjandas-loanpredictor-t75ej.ondigitalocean.app/
 
 ![image](https://user-images.githubusercontent.com/47033532/149674938-98266aad-0955-4996-b4b1-27bb63a63651.png)
 
