@@ -9,6 +9,22 @@ Website link - https://debanjandas-loanpredictor-rtbl5.ondigitalocean.app/
 
 Report Link - https://github.com/debanjandas9999/Credit-Risk-Assesment-Using-Selected-Machine-Learning-Algorithms-/blob/main/UCD_CS_FYP___CreditRiskAssessmentReport.pdf
 
+Abstract 
+
+It is important for a bank to assess its credit risk and the extent of its exposure in the event of
+non-performing customers. Statistical approaches have been used to estimate this type of risk for
+decades, and with recent advances in the field of machine learning, there has been an interest
+in seeing whether machine learning algorithms can achieve better risk quantification. The aim
+of this study is to see which approach from a collection of machine learning techniques performs
+the best in default prediction when model evaluation parameters are chosen. Logistic Regression,
+Random Forest, XGBoost, and Artificial Neural Network were the techniques studied. To address
+the imbalance between classes for the response variable, an oversampling technique known as
+SMOTE was used. In order to enhance model accuracy, data was divided into clusters, followed
+by the deployment of Machine Learning models on each of these clusters. In terms of the chosen
+model evaluation metric, the results showed that XGBoost with hyperparameter tuning achieved
+the best result. An attempt has also been made to simulate data in a pandemic environment and
+the built-in model has been adjusted accordingly to assess credit risk.
+
 The project can be divided into 3 sections - 
 
 1. Jupyter Notebook and R program (to prepare dataset)
