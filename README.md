@@ -50,6 +50,7 @@ institution might segment customers according to a wide range of factors, which 
 for filtered marketing purposes.
 
 Advanced Requirements
+
 • The possibility of a global pandemic/market crash would also be taken into consideration.
 A new dataset would be simulated for the same people that would look like one affected
 by a pandemic/market crash. A credit score would be calculated for each customer. Following that, both the datasets would be compared and the model would be able to identify
