@@ -6,6 +6,9 @@ Student ID - 17202833
 
 Website link - https://debanjandas-loanpredictor-rtbl5.ondigitalocean.app/
 
+![image](https://user-images.githubusercontent.com/47033532/149674938-98266aad-0955-4996-b4b1-27bb63a63651.png)
+
+
 
 Report Link - https://github.com/debanjandas9999/Credit-Risk-Assesment-Using-Selected-Machine-Learning-Algorithms-/blob/main/UCD_CS_FYP___CreditRiskAssessmentReport.pdf
 
